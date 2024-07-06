@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="uft-8">
+        <title>Movies Database</title>
+    </head>
+    <body>
+        <header> 
+            <h1>welcome to Movie Database</h1>
+        </header>
+        <section>
+            <h2>Discover popular movies</h2>
+            <p>Explore our collection of timeless and blockbusters hits .<br><i> find movies that captive and inspire .</i></p>
+             <p align="right">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        </p> 
+        </section>
+
+        <section>
+            <table border="1">
+                <tr>
+                    <th>title</th>
+                    <th>Director</th>
+                    <th>Year</th>
+                    <th>Genre</th>
+                </tr>
+                <tr>
+                    <th>1544</th>
+                    <th>sandra</th>
+                    <th>2000</th>
+                    <th>drama</th>
+                </tr>
+                <tr>
+                    <th>manifest</th>
+                    <th>whoknow</th>
+                    <th>2015</th>
+                    <th>crime</th>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>top 5 movies</h2>
+            <ol>
+                <li><strong>Godfather</strong></li>
+                <li>manifest</li>
+                <li>the hundred</li>
+                <li>1345</li>
+                <li>lacasa</li>
+            </ol>
+        </section>
+        <section>
+            <h2>Enter your fav movie</h2>
+            <p>help us to know you </p>
+            <form action="/submit">
+                <label for="title">Title</label>
+                <input type="text " id="title" name="title " required />
+                <br>
+                <label for="director">Diroctor</label>
+                <input type="text " id="director" name="director "/>
+                <br>
+                <label for="genre">Genre</label>
+                <select id="genre" name="genre">
+                    <option value="action">Drama</option> <!-- value for backend to send data -->
+                    <option>Action</option>
+                    <option>Comedy</option>
+                    <option>Crime</option>
+                    <option>Horror</option>
+                </select>
+                <br>
+
+                <label for="release_date">Date</label>
+                <input type="Date"  id="release_date">
+                <br>
+                <label for="image">Upload image</label>
+                <input type="file" id="image" name="image">
+                <br>
+
+                <button type="submit"  >Submit</button>
+            </form> 
+        </section>
+
+    </body>
+</html>
 
