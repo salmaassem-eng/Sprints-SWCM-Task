@@ -59,7 +59,7 @@ nav ul li a:hover{
 .director-banner{
     position: relative;
     height: 65vh;
-    background: url(../assets/cover.jpg) no-repeat center center/cover;
+    background: url(../assets/nolanposters.jpeg) no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
