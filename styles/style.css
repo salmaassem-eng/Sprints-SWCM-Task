@@ -140,3 +140,64 @@ footer{
     margin: 0;
     width: 100%;
 }
+
+
+@media (max-width:1024px){
+    .info-section, .movie-section, .topMovie-section, .form-section {
+        margin: 20px;
+        padding: 20px;
+    }
+    .info-section {
+        margin-top: 100px;
+    }
+}
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 30px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .movie-table th, .movie-table td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header .logo {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .info-section, .movie-section, .topMovie-section, .form-section {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .info-section {
+        margin-top: 100px;
+    }
+
+    .movie-table th, .movie-table td {
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .form-section input, .form-section select, .form-section button {
+        font-size: 14px;
+    }
+}
