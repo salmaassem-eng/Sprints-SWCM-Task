@@ -7,38 +7,40 @@ body{
     background-color: #1c1c1c;
 }
 
+*{
+    box-sizing: border-box;
+}
 
-.main-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:10px 20px;
+    padding: 10px 20px;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);  /*Transparent background*/
-    z-index: 1000;  /*make it pop moreee بنديله رقم اعلي من كل الصفحه  */
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    backdrop-filter: blur(10px);
+    z-index: 1000;
 }
 
-.main-header .logo{
+.logo {
     font-size: 24px;
     font-weight: bold;
-    a{
-        color: #fff;
-        text-decoration: none;
-    }
+    color: #fff;
+    text-decoration: none;
 }
 
-nav ul{
+nav ul {
     list-style: none;
     display: flex;
     margin: 0;
-    padding: 15px 30px 15px 15px ;
-    li{
-        margin: 0 15px ;
-    }
+    padding: 15px 30px 15px 15px;    
+}
+
+nav ul li {
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -48,9 +50,32 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
-nav ul li a:hover{
-    color: #f39c12;
+nav ul li a:hover {
+    color: #f39c12; /* Highlight color on hover */
 }
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked + .menu-icon + nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 20px;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 
 .movie-details{
     margin-top: 80px;
@@ -199,4 +224,25 @@ footer{
     padding: 20px;
     background-color: #333;
     color: #fff;
+}
+
+@media(max-width:1024px){
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 30px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+    .movie-details , .movie-banner-info , .pop-movies{
+
+    }
 }

@@ -7,6 +7,11 @@ body, html {
     color: #fff;
 }
 
+
+*{
+    box-sizing: border-box;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -17,7 +22,7 @@ header {
     top: 0;
     left: 0;
     background: rgba(255, 255, 255, 0.1); /* Transparent background */
-    backdrop-filter: blur(10px); 
+    backdrop-filter: blur(10px);
     z-index: 1000;
 }
 
@@ -48,6 +53,28 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #f39c12; /* Highlight color on hover */
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked + .menu-icon + nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 20px;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .director-details {
@@ -179,4 +206,41 @@ footer {
     padding: 20px;
     background-color: #333;
     color: white;
+}
+
+@media(max-width:1024px){
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 30px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .director-info{
+        flex-direction: column;
+    }
+    .director-photo img{
+        width: 350px;
+    }
+    .director-text p{
+        font-size: 24px;
+    }
+    .movie-item{
+        width: 800px;
+    }
+    .movie-info h3{
+        font-size: 32px;
+    }
+    .movie-info p{
+        font-size: 32px;
+    }
 }
